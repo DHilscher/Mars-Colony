@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Alien } from '../models/alien';
+import { Report } from '../models/report';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class AlienService {
-    aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+export class EncounterService {
+    encountersUrl = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
     constructor(private http: Http){}
 
-    getAliens(): Promise<Alien[]> {
-       return this.http.get(this.aliensUrl)
+    getReport(): Promise<Report[]> {
+       return this.http.get(this.encountersUrl)
                   .toPromise()
-                  .then((response) => response.json().aliens)
+                  .then((response) => response.json().encounters)
                   .catch(this.handleError);
     }
 
-    handleError(error) {
-        console.error(error);
+    private handleError(error: any): Promise<any> {
+        console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     }
 }
