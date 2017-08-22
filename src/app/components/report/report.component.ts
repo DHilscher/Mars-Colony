@@ -5,13 +5,18 @@ import { AlienService } from '../../services/alien';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styles: []
+  styles: [],
+  providers: [
+    AlienService,
+  ]
 })
 export class ReportComponent implements OnInit {
 
-  constructor(alienService: AlienService) { }
+  constructor(private alienService: AlienService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    const aliens = await this.alienService.getAliens();
+    console.log(aliens);
   }
 
 }

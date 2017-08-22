@@ -9,7 +9,7 @@ export class JobService {
 
     constructor(private http: Http){}
 
-    getAliens(): Promise<Job[]> {
+    getJobs(): Promise<Job[]> {
        return this.http.get(this.jobsUrl)
                   .toPromise()
                   .then((response) => response.json().jobs)

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Colonist } from '../models/colonist';
+import { Colonist, NewColonist } from '../models/colonist';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -9,11 +9,15 @@ export class ColonistService {
 
     constructor(private http: Http){}
 
-    getColonists(): Promise<Colonist[]> {
-       return this.http.get(this.colonistsUrl)
-                  .toPromise()
-                  .then((response) => response.json().colonist)
-                  .catch(this.handleError);
+    registerColonist(colonist: NewColonist ): Promise<Colonist> {
+        const headers = new Headers({'Content-Type': 'application/json'});
+        const body = JSON.stringify({ colonist });
+        return this.http
+                   .post(this.colonistsUrl, body, { headers: headers })
+                   .toPromise()
+                   .then(response => response.json().colonist)
+                   .catch(this.handleError);
+       
     }
 
     private handleError(error: any): Promise<any> {

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -24,7 +25,8 @@ import { NotFoundComponent } from './components/notfound/notfound.component';
   imports: [
     BrowserModule, 
     RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
