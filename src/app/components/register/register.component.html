@@ -9,14 +9,17 @@
 </div>-->
 
 <div class="page">
-  <form [formGroup]="registerForm" novalidate>
+  <form [formGroup]="registerForm" novalidate (submit)="registerColonist()">
     <input type="text" placeholder="" formControlName="name"/>
     <input type="number" formControlName="age"/>
     <select formControlName="job_id">
-      <option value="none">Select a Job</option>
-      <option *ngFor="let job of jobs" value="job.id">{{ job.name }}</option>
+      <option value="">Select a Job</option>
+      <option *ngFor="let job of jobs" value="{{job.id}}">{{ job.name }}</option>
     </select>
+    <button [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
   </form>
   {{ registerForm.value | json }}
+  {{ registerForm.status | json }}
+  
 </div>
   
