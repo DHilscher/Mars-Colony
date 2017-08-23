@@ -9,21 +9,14 @@
 </div>-->
 
 <div class="page">
-  <input type="text" #Item/><button (click)="addListItem(item.value)">Add Item</button>
-  {{ data }}
-  <!--<form>
-    <input type="text" placeholder=""/>
-    <input type="number" placeholder=""/>
-    <select>
+  <form [formGroup]="registerForm" novalidate>
+    <input type="text" placeholder="" formControlName="name"/>
+    <input type="number" formControlName="age"/>
+    <select formControlName="job_id">
       <option value="none">Select a Job</option>
+      <option *ngFor="let job of jobs" value="job.id">{{ job.name }}</option>
     </select>
-  </form>-->
-  <div class ="page">
-    <p *ngIf="data.length > 10">Your list is too long!</p>
-    <ul [ngClass]="{ warning: data.length > 10, ok: data.length < 10 }">
-      <li *ngFor="let encounter of data">{{ encounter.text }}
-        <button type="button" (click)="removeListItem(encounter)">X</button>
-      </li>
-    </ul>
-    </div>
+  </form>
+  {{ registerForm.value | json }}
 </div>
+  

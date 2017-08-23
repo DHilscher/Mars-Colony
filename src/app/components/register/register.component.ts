@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ColonistService } from '../../services/colonist';
 import { JobService } from '../../services/job';
+import { Job } from '../../models/job';
 import { FormControl, FormGroup } from '@angular/forms';
 
 
@@ -14,6 +15,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   ]
 })
 export class RegisterComponent implements OnInit {
+  jobs: Job[];
+
+  registerForm = new FormGroup({
+    name: new FormControl(''),
+    age: new FormControl(''),
+    job_id: new FormControl('')
+  });
   
   constructor(
     private jobService: JobService,
@@ -21,7 +29,6 @@ export class RegisterComponent implements OnInit {
     ) { }
 
   async ngOnInit() {
-    
+  this.jobs = await this.jobService.getJobs();    
   }
-
 }
