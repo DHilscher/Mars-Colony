@@ -15,12 +15,12 @@ import { NewColonist } from '../../models/colonist'
     ColonistService
   ]
 })
-  export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit {
   jobs: Job[];
 
   registerForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    age: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required, Validators.maxLength(100), Validators.minLength(2), this.noNumbers(/\d/)]),
+    age: new FormControl('', [Validators.required, Validators.max(150000), Validators.min(0)]),
     job_id: new FormControl('', [Validators.required])
   });
   
@@ -42,4 +42,11 @@ import { NewColonist } from '../../models/colonist'
     const colonist = await this.colonistService.registerColonist(newColonist);
     console.log('colonist was saved!', colonist);
   }
+  private noNumbers(validNameRegex): ValidatorFn {
+    return (control): { [key: string] : any } => {
+      const forbiddenName = validNameRegex.test(control.value)
+      return forbiddenName ? { 'forbiddenName' : { value: control.value } } : null;
+    }
+  }
+  
 }

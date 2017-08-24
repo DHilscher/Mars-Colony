@@ -11,9 +11,9 @@ import { NotFoundComponent } from './components/notfound/notfound.component';
 
 
         export const appRoutes: Routes = [
-            {path: '', component: WelcomeComponent}, //Home page
-            {path: 'register', component: RegisterComponent},
-            {path: 'encounters', component: EncountersComponent},
-            {path: 'report', component: ReportComponent},
-            {path: '**', component: NotFoundComponent} //Any path that doesn't match one of the above
+            {path: '', component: WelcomeComponent, data: { state: 'welcome' } }, //Home page
+            {path: 'register', component: RegisterComponent, data: { state: 'register' } },
+            {path: 'encounters', component: EncountersComponent, data: { state: 'encounters' } },
+            {path: 'report', component: ReportComponent, data: { state: 'report' } },
+            {path: '**', component: NotFoundComponent, data: { state: 'notfound' }} //Any path that doesn't match one of the above
 ];
