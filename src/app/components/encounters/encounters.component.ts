@@ -4,7 +4,7 @@ import { EncounterService } from '../../services/encounters';
 @Component({
   selector: 'app-encounters',
   templateUrl: './encounters.component.html',
-  styles: [],
+  styleUrls: ['./encounters.component.scss'],
   providers: [ 
   EncounterService,
   ]

@@ -10,7 +10,7 @@ import { Alien } from '../../models/alien';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styles: [],
+  styleUrls: ['./report.component.scss'],
   providers: [
     AlienService,
     EncounterService

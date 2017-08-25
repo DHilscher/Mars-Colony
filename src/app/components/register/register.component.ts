@@ -9,7 +9,7 @@ import { NewColonist } from '../../models/colonist'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styles: [],
+  styleUrls: ['./register.component.scss'],
   providers: [
     JobService,
     ColonistService
