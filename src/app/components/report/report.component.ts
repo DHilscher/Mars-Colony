@@ -21,8 +21,6 @@ export class ReportComponent implements OnInit {
 
   reportForm = new FormGroup({
     atype: new FormControl('', [Validators.required]),
-    date: new FormControl('', [Validators.required]),
-    colonist_id: new FormControl('', [Validators.required]),
     action: new FormControl('', [Validators.required, Validators.maxLength(500), Validators.minLength(2)])
   });
 
@@ -38,10 +36,10 @@ export class ReportComponent implements OnInit {
   
  async reportEncounter() {
     const newReport: NewReport = {
-      colonist_id: this.reportForm.get('colonist_id').value,
+      colonist_id: '2',
       action: this.reportForm.get('action').value,
       atype: this.reportForm.get('atype').value,
-      date: this.reportForm.get('date').value
+      date: '3000-1-1'
     };
    
   const encounter = await this.encounterService.reportEncounter(newReport);

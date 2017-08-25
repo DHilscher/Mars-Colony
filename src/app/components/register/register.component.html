@@ -16,7 +16,7 @@
       <option value="">Select a Job</option>
       <option *ngFor="let job of jobs" value="{{job.id}}">{{ job.name }}</option>
     </select>
-    <button [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
+    <button routerLink="/report" [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
   </form>
   {{ registerForm.value | json }}
   {{ registerForm.status | json }}
