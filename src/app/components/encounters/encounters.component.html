@@ -1,0 +1,14 @@
+<div class="encounters-container">
+  <h1 class="Encounters-heading">Recent Encounters 
+  <span>See an Alien? Report it!</span></h1>
+  <p>test</p>
+  <ul>
+      <li *ngFor="let encounter of encounters">
+        <p>{{ encounter.date }}</p>
+        <p>{{ encounter.atype }}</p>
+        <p>{{ encounter.action }}</p>
+        
+      </li>
+
+  </ul>
+</div>

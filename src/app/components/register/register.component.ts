@@ -3,7 +3,9 @@ import { ColonistService } from '../../services/colonist';
 import { JobService } from '../../services/job';
 import { Job } from '../../models/job';
 import { FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
-import { NewColonist } from '../../models/colonist'
+import { NewColonist } from '../../models/colonist';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -27,6 +29,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private jobService: JobService,
     private colonistService: ColonistService,
+    private router:Router
+
     ) { }
 
   async ngOnInit() {
@@ -41,6 +45,8 @@ export class RegisterComponent implements OnInit {
 
     const colonist = await this.colonistService.registerColonist(newColonist);
     console.log('colonist was saved!', colonist);
+    this.router.navigate(['encounters']);
+
   }
   private noNumbers(validNameRegex): ValidatorFn {
     return (control): { [key: string] : any } => {

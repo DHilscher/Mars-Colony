@@ -4,6 +4,7 @@ import { EncounterService } from '../../services/encounters';
 import { FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
 import { NewReport } from '../../models/report';
 import { Alien } from '../../models/alien';
+import { Router } from '@angular/router';
 
 
 
@@ -27,6 +28,7 @@ export class ReportComponent implements OnInit {
   constructor(
     private alienService: AlienService,
     private encounterService: EncounterService,
+    private router:Router
     ) { }
 
   async ngOnInit() {
@@ -35,6 +37,7 @@ export class ReportComponent implements OnInit {
 
   
  async reportEncounter() {
+   console.log('test');
     const newReport: NewReport = {
       colonist_id: '2',
       action: this.reportForm.get('action').value,
@@ -44,6 +47,7 @@ export class ReportComponent implements OnInit {
    
   const encounter = await this.encounterService.reportEncounter(newReport);
   console.log('alien was reported', encounter);
+  this.router.navigate(['encounters']);
  }
 
 }
