@@ -4,17 +4,23 @@
     background: #c1552e;
     h1 {
         white-space: pre-line;
+        text-align: center;
     }
 }
 
 
 footer {
+    display: flex;
     height: 25vh;
     background: black;
-    color: white;
     text-align: center;
     h2 {
         margin: 0;
-        padding: 10.6% 0px;
+    }
+    a {
+        color: white;
+        margin: auto;
+        text-decoration: none;
+        width: 100%;  
     }
 }
