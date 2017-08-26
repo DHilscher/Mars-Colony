@@ -1,3 +1,20 @@
-h1 {
-    white-space: pre-line;
+.page {
+    height: 75vh;
+    overflow: scroll;
+    background: #c1552e;
+    h1 {
+        white-space: pre-line;
+    }
+}
+
+
+footer {
+    height: 25vh;
+    background: black;
+    color: white;
+    text-align: center;
+    h2 {
+        margin: 0;
+        padding: 10.6% 0px;
+    }
 }
