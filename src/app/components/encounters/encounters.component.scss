@@ -1,20 +1,46 @@
 .page {
-    height: 75vh;
-    overflow: scroll;
     background: #c1552e;
+    height: 73.7vh;
+    overflow: scroll;
     h1 {
-        white-space: pre-line;
+        font-size: 41px;
+        font-weight: normal;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        margin-bottom: 0;
+        padding-bottom: 9%;
+        padding-top: 4%;
         text-align: center;
+        white-space: pre-line;
+        span {
+            font-size: 19px;
+            font-weight: normal;
+        }
+    }
+    ul {
+        list-style: none;
+        width: 90%;
+        padding: 0;
+        margin: 0 auto;
+        p {
+            margin: 0;
+            font-size: 19px;
+        }
+        li {
+            line-height: 18px;
+            padding-bottom: 18px;
+        }
     }
 }
 
-
 footer {
-    display: flex;
-    height: 25vh;
     background: black;
+    display: flex;
+    height: 26.3vh;
     text-align: center;
     h2 {
+        font-size: 37px;
+        font-weight: normal;
         margin: 0;
     }
     a {

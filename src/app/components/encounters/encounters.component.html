@@ -4,8 +4,7 @@
     <span>See an Alien? Report it!</span></h1>
     <ul>
       <li *ngFor="let encounter of encounters">
-          <p>{{ encounter.date }}</p>
-          <p>{{ encounter.atype }}</p>
+          <p>{{ encounter.date }} - {{ encounter.atype }}</p>
           <p>{{ encounter.action }}</p>
         
       </li>
