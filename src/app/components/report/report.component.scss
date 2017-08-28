@@ -11,7 +11,7 @@
             border-radius: 0;
             border-bottom: white 1px solid;
             color: #c1552e;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 2.3vh;
             padding-bottom: .5vh;
             -webkit-appearance: none;
@@ -21,13 +21,16 @@
             border: none;
             color: white;
             font-size: 36px;
-            margin-top: 11.5vh;
+            margin-top: 10vh;
+            cursor: pointer;
         }
         textarea {
             background: transparent;
             border: 1px solid black;            
             color: #c1552e;
+            font-size: 18px;
             height: 25vh;
+            padding: 2% 3%;
             &::-webkit-input-placeholder {
             color: #c1552e;
             font-size: 18px;

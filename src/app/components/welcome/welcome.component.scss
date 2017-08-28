@@ -1,37 +1,49 @@
-body {
-  background: red;
+.page {
+  text-align: center;
+  color: white;
+  h1 {
+    margin: 0;
+    padding-bottom: 24vh;
+    font-size: 38px;
+    padding-top: 13vh;
+    text-transform: uppercase;
+    word-spacing: -12px;
+  }
+  .center-content {
+    padding-bottom: 16vh;
+  }
+  h2 {
+    font-size: 26px;
+  }
 }
 
-.container {
+.welcome-button-container {
   width: 20vw;
   height: 20vh;
   margin: 0 auto;
+  .pulse-button {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border: none;
+    box-shadow: 0 0 0 0 rgb(193, 85, 46);
+    border-radius: 50%;
+    background: #C1552E url(../../../assets/images/marvin-the-martian.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  }
 }
 
-.pulse-button {
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  border: none;
-  box-shadow: 0 0 0 0 rgb(193, 85, 46);
-  border-radius: 50%;
-  background: #C1552E url(../../../assets/images/marvin-the-martian.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-}
-// .pulse-button:hover 
-// {
-//   -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
-// }
 
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 100px rgba(232, 76, 61, 0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 100px rgba(232, 76, 61, 0);}}

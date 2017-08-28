@@ -3,13 +3,12 @@
     height: 73.7vh;
     overflow: scroll;
     h1 {
-        font-size: 41px;
+        font-size: 28px;
         font-weight: normal;
         line-height: 20px;
-        letter-spacing: 0.1px;
         margin-bottom: 0;
-        padding-bottom: 9%;
-        padding-top: 4%;
+        padding-bottom: 5vh;
+        padding-top: 3vh;
         text-align: center;
         white-space: pre-line;
         span {
@@ -24,11 +23,10 @@
         margin: 0 auto;
         p {
             margin: 0;
-            font-size: 19px;
         }
         li {
             line-height: 18px;
-            padding-bottom: 18px;
+            padding-bottom: 2vh;
         }
     }
 }
@@ -39,9 +37,10 @@ footer {
     height: 26.3vh;
     text-align: center;
     h2 {
-        font-size: 37px;
+        font-size: 35px;
         font-weight: normal;
         margin: 0;
+        cursor: pointer;
     }
     a {
         color: white;
