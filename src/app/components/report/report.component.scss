@@ -8,8 +8,8 @@
         select {
             background: transparent;
             border: none;
-            border-radius: 0;
             border-bottom: white 1px solid;
+            border-radius: 0;
             color: #c1552e;
             font-size: 18px;
             margin-bottom: 2.3vh;
@@ -20,9 +20,9 @@
             background: transparent;
             border: none;
             color: white;
+            cursor: pointer;
             font-size: 36px;
             margin-top: 10vh;
-            cursor: pointer;
         }
         textarea {
             background: transparent;
@@ -40,8 +40,8 @@
     h1 {
         color: white;
         line-height: 20px;
-        padding: 5.6vh 0;
         margin: 0 auto;
+        padding: 5.6vh 0;
         text-align: center;
         white-space: pre-line;
         width: 80vw;
