@@ -1,0 +1,44 @@
+.page {
+    h1 {
+        color: white;        
+        margin: 0;
+        padding: 4vh 0 5vh;
+        text-align: center;
+    }
+    form {
+        color: #c1552e;
+        display: flex;
+        flex-direction: column;
+        margin: 0 5vh;
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px white solid;
+            color: #c1552e;
+            font-size: 20px;
+            margin-bottom: 5vh;
+            &::-webkit-input-placeholder {
+                color: #c1552e;
+            }
+        }
+        select {
+            background: transparent;
+            border: none;
+            border-bottom: 1px white solid;          
+            color: #c1552e;
+            font-size: 20px;
+            margin-bottom: 20vh;       
+            -webkit-appearance: none;
+        }
+    }
+    button {
+        background: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+        h2 {
+            text-align: center;
+            font-size: 34px;
+        }
+    }
+}

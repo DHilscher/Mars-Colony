@@ -1,12 +1,13 @@
 <div class="page">
+  <h1>Register</h1>
   <form [formGroup]="registerForm" novalidate (submit)="registerColonist()">
-    <input type="text" placeholder="" formControlName="name"/>
-    <input type="number" formControlName="age"/>
+    <input type="text" placeholder="Name" formControlName="name"/>
+    <input type="number" placeholder="Age" formControlName="age"/>
     <select formControlName="job_id">
-      <option value="">Select a Job</option>
+      <option value="">Select occupation</option>
       <option *ngFor="let job of jobs" value="{{job.id}}">{{ job.name }}</option>
     </select>
-    <button [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
+    <button [disabled]="registerForm.status === 'INVALID'" type="submit"><h2>Check in</h2></button>
   </form>
 </div>
   
