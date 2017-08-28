@@ -1,0 +1,49 @@
+.page {
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80vw;
+        
+        select {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: white 1px solid;
+            color: #c1552e;
+            font-size: 20px;
+            margin-bottom: 2.3vh;
+            padding-bottom: .5vh;
+            -webkit-appearance: none;
+        }
+        button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 36px;
+            margin-top: 11.5vh;
+        }
+        textarea {
+            background: transparent;
+            border: 1px solid black;            
+            color: #c1552e;
+            height: 25vh;
+            &::-webkit-input-placeholder {
+            color: #c1552e;
+            font-size: 18px;
+            }
+        }
+    }
+    h1 {
+        color: white;
+        line-height: 20px;
+        padding: 5.6vh 0;
+        margin: 0 auto;
+        text-align: center;
+        white-space: pre-line;
+        width: 80vw;
+        span {
+            font-size: 16px;
+        }
+    }
+}

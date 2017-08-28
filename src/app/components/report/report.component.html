@@ -1,13 +1,15 @@
 <div class="page">
+  <h1 class="Report-heading">Report Encounter
+  <span>Safety on Mars is your responsibility</span></h1>
   <form [formGroup]="reportForm" novalidate (submit)="reportEncounter()">
     <select formControlName="atype">
-      <option value="">Report a Encounter</option>
+      <option value="">Select alien type</option>
       <option *ngFor="let alien of aliens" value="{{alien.type}}">{{ alien.type }}</option>
     </select>
     <textarea formControlName="action" placeholder="Action taken" ng-model="encounter.action" name="Action_taken" id="" rows="10"></textarea>
-    <button type="submit">Report</button>
+    <button type="submit">Submit Report</button>
   </form>
-  {{ reportForm.value | json }}
-  {{ reportForm.status | json }}
+  <!--{{ reportForm.value | json }}
+  {{ reportForm.status | json }}-->
   
 </div>
