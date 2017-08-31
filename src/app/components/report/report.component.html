@@ -7,6 +7,6 @@
       <option *ngFor="let alien of aliens" value="{{alien.type}}">{{ alien.type }}</option>
     </select>
     <textarea formControlName="action" placeholder="Action taken" ng-model="encounter.action" name="Action_taken" id="" rows="10"></textarea>
-    <button type="submit">Submit Report</button>
+    <button [disabled]="reportForm.status === 'INVALID'" type="submit">Submit Report</button>
   </form>
 </div>
