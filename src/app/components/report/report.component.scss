@@ -15,19 +15,24 @@
             margin-bottom: 2.3vh;
             padding-bottom: .5vh;
             -webkit-appearance: none;
-        }
-            select.ng-dirty.ng-invalid {
-                background-color: #ffdddd;
+            &.ng-dirty.ng-invalid {
+                animation: pulse 1.25s infinite;
+                box-shadow: 0 0 0 red;
             }
+        }
         button {
             background: transparent;
             border: none;
             color: #f5f5f5;
             cursor: pointer;
             font-size: 36px;
-            margin-top: 10vh;
+            margin: 10vh auto 0;
+            width: 26%;
+
             &:disabled {
-                color: pink;
+                background: linear-gradient(45deg, red, black);
+                -webkit-background-clip: text;           
+                -webkit-text-fill-color: transparent;
             }
         }
         textarea {
@@ -41,10 +46,14 @@
             color: #f5f5f5;
             font-size: 18px;
             }
-        }
-         textarea.ng-dirty.ng-invalid {
-                border: 2px solid red;
+            &.ng-dirty.ng-invalid {
+                animation: pulse 1.25s infinite;
+                box-shadow: 0 0 0 red;
             }
+        }
+        //  textarea.ng-invalid {
+        //         border: 2px solid red;
+        //     }
     }
     h1 {
         color: #f5f5f5;
@@ -59,3 +68,5 @@
         }
     }
 }
+
+@keyframes pulse {to {box-shadow: 0 0 0 5px rgba(232, 76, 61, 0);}}
