@@ -7,13 +7,13 @@ import 'rxjs/add/operator/toPromise';
 export class AlienService {
     aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
 
-    constructor(private http: Http){}
+    constructor(private http: Http) { }
 
     getAliens(): Promise<Alien[]> {
-       return this.http.get(this.aliensUrl)
-                  .toPromise()
-                  .then((response) => response.json().aliens)
-                  .catch(this.handleError);
+        return this.http.get(this.aliensUrl)
+            .toPromise()
+            .then((response) => response.json().aliens)
+            .catch(this.handleError);
     }
 
     private handleError(error: any): Promise<any> {

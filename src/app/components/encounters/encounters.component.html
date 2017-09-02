@@ -1,18 +1,15 @@
 <div class="page">
   <div class="encounters-container">
-    <h1 class="Encounters-heading">Recent Encounters 
-    <span>See an Alien? Report it!</span></h1>
+    <h1 class="Encounters-heading">Recent Encounters
+      <span>See an Alien? Report it!</span></h1>
     <ul>
       <li *ngFor="let encounter of encounters">
-          <p>{{ encounter.date }} - {{ encounter.atype }}</p>
-          <p>{{ encounter.action }}</p>
-        
+        <p>{{ encounter.date }} - {{ encounter.atype }}</p>
+        <p>{{ encounter.action }}</p>
       </li>
-
     </ul>
   </div>
 </div>
-
 <footer>
   <a routerLink="/report">
     <h2>Report Encounter</h2>

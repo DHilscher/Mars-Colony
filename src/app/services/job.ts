@@ -7,13 +7,13 @@ import 'rxjs/add/operator/toPromise';
 export class JobService {
     jobsUrl = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
 
-    constructor(private http: Http){}
+    constructor(private http: Http) { }
 
     getJobs(): Promise<Job[]> {
-       return this.http.get(this.jobsUrl)
-                  .toPromise()
-                  .then((response) => response.json().jobs)
-                  .catch(this.handleError);
+        return this.http.get(this.jobsUrl)
+            .toPromise()
+            .then((response) => response.json().jobs)
+            .catch(this.handleError);
     }
 
     private handleError(error: any): Promise<any> {

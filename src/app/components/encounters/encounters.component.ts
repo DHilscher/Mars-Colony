@@ -5,17 +5,16 @@ import { Report } from '../../models/report';
   selector: 'app-encounters',
   templateUrl: './encounters.component.html',
   styleUrls: ['./encounters.component.scss'],
-  providers: [ 
-  EncounterService,
+  providers: [
+    EncounterService,
   ]
 })
 export class EncountersComponent implements OnInit {
-encounters: Report[];
+  encounters: Report[];
   constructor(private encounterService: EncounterService) { }
 
-async ngOnInit() {
-   this.encounters = await this.encounterService.getReport();
-  console.log(this.encounters);
+  async ngOnInit() {
+    this.encounters = await this.encounterService.getReport();
+    console.log(this.encounters);
   }
-
 }
